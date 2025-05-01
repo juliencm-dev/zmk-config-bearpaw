@@ -33,7 +33,7 @@
     status = "okay";
 
     mosi-pin = <29>;
-    sck-pin = <31>;    /
+    sck-pin = <33>;
     cs-gpios = <&gpio0 17 GPIO_ACTIVE_LOW>;
 
     nice_view: nice_view@0 {
@@ -44,6 +44,6 @@
         reg = <0>;
 
         // Link CS pin configuration
-        cs-gpios = <&gpio0 17 GPIO_ACTIVE_LOW>; /
+        cs-gpios = <&gpio0 17 GPIO_ACTIVE_LOW>;
     };
 };

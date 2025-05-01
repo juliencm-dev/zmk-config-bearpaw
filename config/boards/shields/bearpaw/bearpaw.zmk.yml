@@ -1,0 +1,12 @@
+file_format: "1"
+id: bearpaw
+name: Bearpaw
+type: shield
+url: https://github.com/yourusername/zmk-config-bearpaw
+requires: [pro_micro]
+features:
+  - keys
+  - display
+siblings:
+  - bearpaw_left
+  - bearpaw_right

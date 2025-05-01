@@ -9,12 +9,14 @@ config ZMK_SPLIT_ROLE_CENTRAL
 config ZMK_USB
     default y
 
-endif
+endif # SHIELD_BEARPAW_LEFT
 
 if SHIELD_BEARPAW_LEFT || SHIELD_BEARPAW_RIGHT
 
 config ZMK_SPLIT
     default y
+
+endif # SHIELD_BEARPAW_LEFT || SHIELD_BEARPAW_RIGHT
 
 if ZMK_DISPLAY
 
@@ -42,5 +44,3 @@ choice LV_COLOR_DEPTH
 endchoice
 
 endif # LVGL
-
-endif

@@ -1,18 +1,12 @@
 #include "bearpaw.dtsi"
 
 &kscan0 {
-    col-gpios = <&gpio0 9 (GPIO_ACTIVE_HIGH)>,
-                <&gpio1 10 (GPIO_ACTIVE_HIGH)>,
-                <&gpio1 11 (GPIO_ACTIVE_HIGH)>,
-                <&gpio1 13 (GPIO_ACTIVE_HIGH)>,
-                <&gpio0 15 (GPIO_ACTIVE_HIGH)>,
-                <&gpio0 2 (GPIO_ACTIVE_HIGH)>;
-};
-
-nice_view_spi: &spi0 {
-    compatible = "nordic,nrf-spim";
-    status = "okay";
-    
-    // SCS pin
-    cs-gpios = <&gpio0 17 GPIO_ACTIVE_LOW>;
+    col-gpios
+        = <&pro_micro 9 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 21 GPIO_ACTIVE_HIGH>  // P1.10 → 21 on ProMicro
+        , <&pro_micro 22 GPIO_ACTIVE_HIGH>  // P1.11 → 22 on ProMicro
+        , <&pro_micro 23 GPIO_ACTIVE_HIGH>  // P1.13 → 23 on ProMicro
+        , <&pro_micro 15 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 2 GPIO_ACTIVE_HIGH>
+        ;
 };

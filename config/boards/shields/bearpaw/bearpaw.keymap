@@ -25,11 +25,11 @@
 // |  ESC    |  Z  |  X  |  C   |  V   |  B   |        |  |       |  N   |  M    |  ,    |  .   |   /   |  RALT |
 //                 |     |      | MO1 | BKSPC |  SHIFT |  | ENTER | SPACE|  MO2  |       |      |
             bindings = <
-&none &kp N1 &kp N2   &kp N3   &kp N4    &kp N5                           &kp N6 &kp N7    &kp N8    &kp N9   &kp N0   &none
+&kp N1 &kp N2   &kp N3   &kp N4    &kp N5                           &kp N6 &kp N7    &kp N8    &kp N9   &kp N0
 &kp TAB   &kp Q  &kp W    &kp E    &kp R     &kp T                            &kp Y  &kp U     &kp I     &kp O    &kp P    &kp BSPC
 &kp LCTRL   &mt LGUI A  &mt LALT S    &mt LCTRL D    &mt LSHFT F     &kp G  &mt RSHFT H  &mt RCTRL J   &mt RALT K     &mt RGUI L    &kp SEMI &kp SQT
 &kp ESC &kp Z  &kp X    &kp C    &kp V     &kp B      &none &none      &kp N  &kp M     &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
-                 &none &none &mo LOWER &kp BKSPC  &kp LSHFT    &kp ENTER  &kp SPACE  &mo RAISE &none  &none
+                  &mo LOWER &kp BKSPC  &kp LSHFT    &kp ENTER  &kp SPACE  &mo RAISE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -48,7 +48,7 @@
 &none    &kp F1    &kp F2    &kp F3      &kp F4    &kp F5                    &kp F6    &kp F7   &kp F8    &kp F9    &kp F10   &none
 &kp GRAVE &kp N1    &kp N2    &kp N3      &kp N4    &kp N5                    &kp N6    &kp N7   &kp N8    &kp N9    &kp N0    &kp F11
 &trans    &kp EXCL  &kp AT    &kp LPAR    &kp RPAR  &kp HASH                 &kp CARET &kp AMPS &kp ASTRK &kp DLLR  &kp PRCNT  &kp F12
-&trans    &kp LBRC &kp RBRC &kp RBKT &kp LBKT  &kp EQUAL   &trans &trans  &kp MINUS  &kp PLUS &kp SEMI  &kp COLON &kp BSLH  &kp PIPE
+&trans    &kp LBRC &kp RBRC &kp LBKT &kp RBKT  &kp EQUAL   &trans &trans  &kp MINUS  &kp PLUS &kp SEMI  &kp COLON &kp BSLH  &kp PIPE
                     &trans    &trans      &trans    &trans     &trans &trans  &trans    &trans   &trans    &trans
             >;
 

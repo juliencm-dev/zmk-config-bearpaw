@@ -30,13 +30,11 @@
 
 &spi1 {
     compatible = "nordic,nrf-spim";
+    status = "okay";
 
-
-    // Your custom pin mapping here
-    mosi-pin = <29>;   // Replace XX with your MOSI pin number
-    sck-pin = <31>;    // Replace YY with your SCK pin number
-    // CS pin configuration
-    cs-gpios = <&gpio0 17 GPIO_ACTIVE_LOW>; // Replace ZZ with your CS pin number
+    mosi-pin = <29>;
+    sck-pin = <31>;    /
+    cs-gpios = <&gpio0 17 GPIO_ACTIVE_LOW>;
 
     nice_view: nice_view@0 {
         compatible = "nordic,nrf-spi";
@@ -46,6 +44,6 @@
         reg = <0>;
 
         // Link CS pin configuration
-        cs-gpios = <&gpio0 17 GPIO_ACTIVE_LOW>; // Same as above
+        cs-gpios = <&gpio0 17 GPIO_ACTIVE_LOW>; /
     };
 };

@@ -20,6 +20,8 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: bearpaw_left nice_view
+    shield: bearpaw_left
   - board: nice_nano_v2
-    shield: bearpaw_right nice_view
+    shield: bearpaw_right
+  - board: nice_nano_v2
+    shield: settings_reset

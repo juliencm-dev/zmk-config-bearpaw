@@ -29,22 +29,4 @@
     };
 };
 
-&spi1 {
-    compatible = "nordic,nrf-spim";
-    status = "okay";
 
-    mosi-gpios = <&gpio0 29 GPIO_ACTIVE_HIGH>;
-    sck-gpios = <&gpio0 31 GPIO_ACTIVE_HIGH>;
-    cs-gpios = <&gpio0 17 GPIO_ACTIVE_LOW>;
-
-    nice_view: nice_view@0 {
-        compatible = "nordic,nrf-spi";
-        status = "okay";
-
-        spi-max-frequency = <4000000>;
-        reg = <0>;
-
-        // Link CS pin configuration
-        cs-gpios = <&gpio0 17 GPIO_ACTIVE_LOW>;
-    };
-};

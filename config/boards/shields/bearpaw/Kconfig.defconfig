@@ -1,0 +1,19 @@
+if SHIELD_BEARPAW_LEFT
+
+config ZMK_KEYBOARD_NAME
+    default "Bearpaw"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+config ZMK_USB
+    default y
+
+endif
+
+if SHIELD_BEARPAW_LEFT || SHIELD_BEARPAW_RIGHT
+
+config ZMK_SPLIT
+    default y
+
+endif

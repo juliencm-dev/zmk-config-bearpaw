@@ -33,8 +33,8 @@
     compatible = "nordic,nrf-spim";
     status = "okay";
 
-    mosi-pin = <29>;
-    sck-pin = <31>;
+    mosi-gpios = <&gpio0 29 GPIO_ACTIVE_HIGH>;
+    sck-gpios = <&gpio0 31 GPIO_ACTIVE_HIGH>;
     cs-gpios = <&gpio0 17 GPIO_ACTIVE_LOW>;
 
     nice_view: nice_view@0 {

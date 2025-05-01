@@ -19,10 +19,6 @@ nice_view_spi: &spi0 {
     
     // SCS pin
     cs-gpios = <&gpio0 17 GPIO_ACTIVE_LOW>;
-    
-    // SCLK and SI pins
-    sck-pin = <31>;  // P0.31 for SCLK
-    mosi-pin = <29>; // P0.29 for SI
 };
 
 

@@ -2,6 +2,7 @@
 
 / {
     chosen {
+        zephyr,display = &nice_view;
         zmk,kscan = &kscan0;
         zmk,matrix_transform = &default_transform;
     };
@@ -22,7 +23,6 @@
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
         wakeup-source;
-        
         diode-direction = "col2row";
         row-gpios
             = <&pro_micro 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
@@ -37,24 +37,27 @@
 &pinctrl {
     spi0_default: spi0_default {
         group1 {
-            psels = <NRF_PSEL(SPIM_SCK, 0, 31)>,
-                    <NRF_PSEL(SPIM_MOSI, 0, 29)>;
+            psels = <NRF_PSEL(SPIM_SCK, 0, 21)>,
+                    <NRF_PSEL(SPIM_MOSI, 0,20)>,
         };
     };
     spi0_sleep: spi0_sleep {
         group1 {
-            psels = <NRF_PSEL(SPIM_SCK, 0, 31)>,
-                    <NRF_PSEL(SPIM_MOSI, 0, 29)>;
+            psels = <NRF_PSEL(SPIM_SCK, 0, 21)>,
+                    <NRF_PSEL(SPIM_MOSI, 0, 20)>,
             low-power-enable;
         };
     };
 };
 
-&spi0 {
+nice_view_spi: &spi0 {
     compatible = "nordic,nrf-spim";
-    status = "okay";
     pinctrl-0 = <&spi0_default>;
     pinctrl-1 = <&spi0_sleep>;
     pinctrl-names = "default", "sleep";
-    cs-gpios = <&pro_micro 2 GPIO_ACTIVE_LOW>;
+    cs-gpios = <&pro_micro 4 GPIO_ACTIVE_HIGH>;
+};
+
+&pro_micro_i2c {
+    status = "disabled";
 };
